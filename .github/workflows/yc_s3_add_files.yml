@@ -5,7 +5,7 @@ env:
   YC_REGION           : "ru-central1"
   YC_S3_BUCKET_NAME   : "no-terrafrom-s3-bucket"
   YC_END_POINT        : "storage.yandexcloud.net"
-  YC_HOST_BUCKET      : "storage.yandexcloud.net/${{ env.YC_S3_BUCKET_NAME }}"
+  YC_HOST_BUCKET      : "storage.yandexcloud.net/no-terrafrom-s3-bucket"
   DEPLOY_PACKAGE_NAME : "my_app_${{ github.sha }}.zip"
 
 #Run automatic when push to master-------
