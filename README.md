@@ -1,5 +1,5 @@
 # my-lessons
-Simple Lessons for GitHub Actions
+Simple Lessons for GitHub Actions for Amazon Web Services (AWS) and Yandex Cloud (YC) 
 
 STATUS:<br>
 AWS S3 add files:<br>
