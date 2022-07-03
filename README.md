@@ -1,7 +1,11 @@
 # my-lessons
 Rep for my lessons
 
-Status My Lessons:<br>
+STATUS:<br>
+AWS S3 add files:<br>
 <img src="https://github.com/vitalikniaz/my-lessons/workflows/CI-CD-Pipelines-to-AWS-EBN/badge.svg?branch=main"><br>
+
+AWS S3 rm files:<br>
+<img src="https://github.com/vitalikniaz/my-lessons/workflows/AWS-S3-RM-ALL/badge.svg?branch=main"><br>
 
 Copyleft by BlackPlombeer 2022 :see_no_evil: :hear_no_evil: :speak_no_evil:
