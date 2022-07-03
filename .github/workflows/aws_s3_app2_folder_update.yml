@@ -1,22 +1,22 @@
 # This is a basic workflow to help you get started with Actions
 
-name: AWS-TO-S3-APP1-FOLDER-UPDATE
+name: AWS-TO-S3-APP2-FOLDER-UPDATE
 env:
   EB_PACKAGE_S3_BUCKET_NAME : "github-vitali-packages"
   EB_APPLICATION_NAME       : "MyFlask"
   EB_ENVIRONMENT_NAME       : "Myflask-env"
-  DEPLOY_PACKAGE_NAME       : "my_app1_${{ github.sha }}.zip"
+  DEPLOY_PACKAGE_NAME       : "my_app2_${{ github.sha }}.zip"
   AWS_REGION_NAME           : "us-west-2"
 
 ##Run automatic when push to master-------
 on:
   push:
     paths:
-    - 'app1_folder/**'
+    - 'app2_folder/**'
   
   pull_request:
     paths: 
-    - 'app1_folder/**'
+    - 'app2_folder/**'
     #branches:
     #  - main
 ##----------------------------------------
@@ -36,7 +36,7 @@ jobs:
     defaults:
       run:
         #Add this when you need go to specific folder
-        working-directory: ./app1_folder
+        working-directory: ./app2_folder
 
     steps:
     - name: Git clone ou repo
