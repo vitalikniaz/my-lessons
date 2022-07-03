@@ -11,8 +11,14 @@ env:
 ##Run automatic when push to master-------
 on:
   push:
-    branches:
-      - main
+    paths:
+    - 'app1_folder/**'
+  
+  pull_request:
+    paths: 
+    - 'app1_folder/**'
+    #branches:
+    #  - main
 ##----------------------------------------
 
 ##Run manual when you need for that-------
@@ -29,6 +35,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
+        #Add this when you need go to specific folder
         working-directory: ./app1_folder
 
     steps:
