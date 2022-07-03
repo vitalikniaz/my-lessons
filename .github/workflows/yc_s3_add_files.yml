@@ -52,8 +52,7 @@ jobs:
         region: ${{ env.YC_REGION }}
         access_key: ${{ secrets.YC_SERVICE_ACC_ID_KEY }}
         secret_key: ${{ secrets.YC_SERVICE_ACC_SECRET_KEY }}
-        website_endpoint: ${{  }}
-    
+      
     - name: Copy ZIP package to Yandex Clous S3 bucket
       run: s3cmd --host=${{ env.YC_END_POINT }} --host-bucket=${{ env.YC_HOST_BUCKET }} put ${{ env.DEPLOY_PACKAGE_NAME }} s3://${{YC_S3_BUCKET_NAME}}/
       
