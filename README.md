@@ -14,4 +14,7 @@ AWS APP1 Update:<br>
 AWS APP2 Update:<br>
 <img src="https://github.com/vitalikniaz/my-lessons/workflows/AWS-TO-S3-APP2-FOLDER-UPDATE/badge.svg?branch=main"><br>
 
+Yandex Cloud Upload to S3:<br>
+<img src="https://github.com/vitalikniaz/my-lessons/workflows/YC-S3-UPLOAD/badge.svg?branch=main"><br>
+
 Copyleft by BlackPlombeer 2022 :see_no_evil: :hear_no_evil: :speak_no_evil:
