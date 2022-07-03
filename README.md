@@ -1,5 +1,5 @@
 # my-lessons
-Simple Lessons for HitHub Actions
+Simple Lessons for GitHub Actions
 
 STATUS:<br>
 AWS S3 add files:<br>
