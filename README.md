@@ -1,5 +1,5 @@
 # my-lessons
-Rep for my lessons
+Simple Lessons for HitHub Actions
 
 STATUS:<br>
 AWS S3 add files:<br>
