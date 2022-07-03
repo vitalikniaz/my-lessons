@@ -8,19 +8,21 @@ env:
   DEPLOY_PACKAGE_NAME       : "flask_app_${{ github.sha }}.zip"
   AWS_REGION_NAME           : "us-west-2"
 
-#Run automatic when push to master
+#Run automatic when push to master-------
 #on:
 #  push:
 #    branches:
 #      - main
+#----------------------------------------
 
-#Run manual when you need for that
+#Run manual when you need for that-------
 on:
   release:
     types: [created]
   
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+#----------------------------------------
 
 jobs:
   my-ci-part:
