@@ -1,3 +1,4 @@
 app2 text folder
 Hello
 test app2
+add line 4
