@@ -34,8 +34,8 @@ jobs:
         aws-secret-access-key : ${{ secrets.MY_AWS_SECRET_KEY }}
         aws-region        : ${{ env.AWS_REGION_NAME }}
     
-    - name: Copy ZIP package to S3 bucket on AWS
+    - name: Remove all packeges from s3 bucket recursive
       run: aws s3 rm s3://${{ env.EB_PACKAGE_S3_BUCKET_NAME }} --recursive
       
-    - name: Happy message S3 clean completed
+    - name: Happy message AWS S3 clean completed
       run: echo "AWS S3 clean successful"
