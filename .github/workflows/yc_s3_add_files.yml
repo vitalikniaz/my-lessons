@@ -5,7 +5,7 @@ env:
   YC_REGION           : "ru-central1"
   YC_S3_BUCKET_NAME   : "no-terrafrom-s3-bucket"
   YC_END_POINT        : "storage.yandexcloud.net"
-  YC_HOST_BUCKET      : "storage.yandexcloud.net/no-terrafrom-s3-bucket"
+  YC_HOST_BUCKET      : "storage.yandexcloud.net/${{ env.YC_S3_BUCKET_NAME }} "
   DEPLOY_PACKAGE_NAME : "my_app_${{ github.sha }}.zip"
 
 #Run automatic when push to master-------
@@ -55,7 +55,9 @@ jobs:
         provider  : aws
       
     - name: Copy ZIP package to Yandex Clous S3 bucket
-      run: s3cmd --storage-class COLD --host=${{ env.YC_END_POINT }} --host-bucket=${{ env.YC_HOST_BUCKET }} put ${{ env.DEPLOY_PACKAGE_NAME }} s3://${{ env.YC_S3_BUCKET_NAME }}
-      #run: s3cmd --host=${{ env.YC_END_POINT }} --host-bucket=${{ env.YC_HOST_BUCKET }} ls s3://${{ env.YC_S3_BUCKET_NAME }}
+      run: |
+        s3cmd --storage-class COLD --host=${{ env.YC_END_POINT }} --host-bucket=${{ env.YC_HOST_BUCKET }} put ${{ env.DEPLOY_PACKAGE_NAME }} s3://${{ env.YC_S3_BUCKET_NAME }}
+        s3cmd --host=${{ env.YC_END_POINT }} --host-bucket=${{ env.YC_HOST_BUCKET }} ls s3://${{ env.YC_S3_BUCKET_NAME }}
+
     - name: Happy message CI complete
       run: echo "CI pipeline part Finished successfuly"
