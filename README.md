@@ -17,4 +17,6 @@ AWS APP2 Update:<br>
 Yandex Cloud Upload to S3:<br>
 <img src="https://github.com/vitalikniaz/my-lessons/workflows/YC-S3-UPLOAD/badge.svg?branch=main"><br>
 
+[![AWS-S3-RM-ALL](https://github.com/vitalikniaz/my-lessons/actions/workflows/aws_s3_rm_all.yml/badge.svg)](https://github.com/vitalikniaz/my-lessons/actions/workflows/aws_s3_rm_all.yml)
+
 Copyleft by BlackPlombeer 2022 :see_no_evil: :hear_no_evil: :speak_no_evil:
