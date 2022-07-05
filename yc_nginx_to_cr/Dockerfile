@@ -22,5 +22,4 @@ EXPOSE 80/tcp
 EXPOSE 443/tcp
 
 # Run the Nginx server
-RUN sudo /etc/init.d/nginx start
-#CMD ["/usr/sbin/nginx", "-g", "daemon off;"]
+CMD ["/usr/sbin/nginx", "-g", "daemon off;"]
