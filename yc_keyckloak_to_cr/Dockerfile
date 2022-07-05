@@ -9,12 +9,13 @@ FROM quay.io/keycloak/keycloak:latest
 #ENV KC_DB_USERNAME=<DBUSERNAME>
 #ENV KC_DB_PASSWORD=<DBPASSWORD>
 #ENV KC_HOSTNAME=localhost
+#Add creds for admin menu
 ENV KEYCLOAK_ADMIN=admin
 ENV KEYCLOAK_ADMIN_PASSWORD=change_me
 
 EXPOSE 8080
 
-#For Production
+#For Production (Strict HTTPS: true)
 #ENTRYPOINT ["/opt/keycloak/bin/kc.sh", "start"]
-#For Development
+#For Development (Strict HTTPS: false)
 ENTRYPOINT ["/opt/keycloak/bin/kc.sh", "start-dev"]
