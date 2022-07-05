@@ -10,8 +10,8 @@ LABEL description="This is custom Docker Image for tests."
 ARG DEBIAN_FRONTEND=noninteractive
 
 # Update Ubuntu Software repository
-RUN apt-get -y
-RUN apt-get -y install nginx
+RUN apt-get update
+RUN apt-get install nginx
 
 # Copy the Nginx config
 COPY default /etc/nginx/sites-available/default
