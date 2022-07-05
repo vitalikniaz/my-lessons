@@ -18,7 +18,7 @@ COPY default /etc/nginx/sites-available/default
 
 # Expose the port for access
 EXPOSE 80/tcp
-EXPOSE 8080/tcp
+#EXPOSE 8080/tcp
 EXPOSE 443/tcp
 
 # Run the Nginx server
