@@ -22,7 +22,12 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
       - name: Echo github env
+        run: env
+      - name: Retrive short tag SHA
         run: |
-          env
           SHORT_TAG=`git rev-parse --short ${{ github.sha }}`
           echo "My short tag $SHORT_TAG"
+      - name: Retrive current branch name
+        run: |
+          BRANCH_NAME=`git branch --show-current`
+          echo "My current branch $BRANCH_NAME"
