@@ -10,6 +10,9 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
+env:
+  SHORT_TAG: git rev-parse --short 1e872b59013425b7c404a91d16119e8452b983f2
+
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
@@ -24,3 +27,4 @@ jobs:
       - name: Echo github env
         run: |
           env
+          echo $SHORT_TAG
