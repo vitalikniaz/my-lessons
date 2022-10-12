@@ -29,5 +29,5 @@ jobs:
           echo "My short tag $SHORT_TAG"
       - name: Retrive current branch name
         run: |
-          BRANCH_NAME=`git branch --show-current`
+          BRANCH_NAME=`git rev-parse --abbrev-ref HEAD`
           echo "My current branch $BRANCH_NAME"
