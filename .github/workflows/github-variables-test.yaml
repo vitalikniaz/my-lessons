@@ -24,4 +24,5 @@ jobs:
       - name: Echo github env
         run: |
           env
-          git rev-parse --short ${{ github.sha }}
+          SHORT_TAG=`git rev-parse --short ${{ github.sha }}`
+          echo "My short tag $SHORT_TAG"
